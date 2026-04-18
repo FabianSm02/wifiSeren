@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <meta name="theme-color" content="#0f3d46" />
+  <title>WiFi | Seren Glamping</title>
+  <meta
+    name="description"
+    content="Conéctate fácilmente a la red WiFi de Seren Glamping."
+  />
+  <link rel="icon" href="favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-sky"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="bg-glow glow-3"></div>
+  <div class="bg-palm-lines"></div>
+  <div class="bg-grain"></div>
+  <div class="bg-wave wave-1"></div>
+  <div class="bg-wave wave-2"></div>
+
+  <main class="page">
+    <section class="wifi-card reveal" id="mainCard">
+      <div class="card-shine"></div>
+      <div class="card-outline"></div>
+
+      <header class="hero">
+        <div class="brand-logo-wrap floating">
+          <img
+            src="https://www.serenglamping.com/wp-content/uploads/2020/09/serenretina.png"
+            alt="Logo Seren Glamping"
+            class="brand-logo"
+          />
+        </div>
+
+        <div class="hero-copy">
+          <span class="eyebrow">SEREN GLAMPING · WIFI GUEST ACCESS</span>
+          <h1>Conéctate y sigue disfrutando del paraíso</h1>
+          <p class="subtitle">
+            Accede a la red WiFi del hotel de forma rápida y elegante. Escanea el
+            código QR o copia los datos de acceso para conectarte en segundos.
+          </p>
+        </div>
+      </header>
+
+      <section class="info-grid">
+        <article class="info-box reveal delay-2">
+          <div class="info-top">
+            <span class="label">Nombre de la red</span>
+            <span class="status-badge">Disponible</span>
+          </div>
+
+          <div class="value-row">
+            <strong class="value wifi-name" id="ssid">Seren Glamping</strong>
+            <button class="mini-btn" onclick="copyText('ssid', 'Nombre de red copiado')">
+              <span>Copiar red</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="info-box reveal delay-3">
+          <div class="info-top">
+            <span class="label">Contraseña</span>
+            <span class="security-pill">WPA / WPA2</span>
+          </div>
+
+          <div class="value-row">
+            <strong class="value password" id="password">Seren123</strong>
+            <button class="mini-btn" onclick="copyText('password', 'Contraseña copiada')">
+              <span>Copiar clave</span>
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <section class="qr-section reveal delay-4">
+        <div class="qr-card">
+          <div class="qr-side">
+            <div class="qr-shell pulse-soft">
+              <div class="qr-frame">
+                <div class="qr-scan"></div>
+                <img
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=360x360&data=WIFI:T:WPA;S:Seren%20Glamping;P:Seren123;;"
+                  alt="Código QR para conectarse al WiFi de Seren Glamping"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="qr-copy">
+            <span class="section-kicker">ACCESO INTELIGENTE</span>
+            <h2>Escanea el código y conéctate al instante</h2>
+            <p>
+              Usa la cámara de tu teléfono para escanear el QR. En algunos
+              dispositivos también puedes mantener presionado sobre el código
+              para abrir la opción de conexión automática a la red.
+            </p>
+
+            <div class="tips">
+              <div class="tip">
+                <span class="tip-icon">✓</span>
+                <span>Ideal para huéspedes en habitaciones, áreas comunes y lounge.</span>
+              </div>
+              <div class="tip">
+                <span class="tip-icon">✓</span>
+                <span>También puedes copiar los datos manualmente si lo prefieres.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="actions reveal delay-5">
+        <button class="primary-btn" onclick="copyAllAccess()">
+          <span>Copiar todos los datos de acceso</span>
+        </button>
+      </section>
+
+      <footer class="footer-note reveal delay-5">
+        Bienvenido a <strong>Seren Glamping</strong> · disfruta tu estadía, la naturaleza y la conexión.
+      </footer>
+
+      <div id="toast" class="toast">Copiado correctamente</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
